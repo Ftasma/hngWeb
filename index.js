@@ -6,16 +6,17 @@ const currentDate = new Date()
 const dayOfWeekNow= currentDate.getDay()
 
 const myTime= new Date()
-const isDST= false
-const offsetHours= isDST?0:1;
+
+const offsetHours= 1;
 myTime.setHours(myTime.getHours()-offsetHours)
 const year = myTime.getUTCFullYear()
-const month= (myTime.getUTCMonth()+1).toString().padStart(2, '0')
-const day = myTime.getUTCDate().toString().padStart(2,'0')
-const hour =( myTime.getUTCHours()+1).toString().padStart(2,'0')
-const minutes = myTime.getUTCMinutes().toString().padStart(2,'0')
-const seconds = myTime.getUTCSeconds().toString().padStart(2,'0')
-console.log(`The time is ${hour}:${minutes}:${seconds}Z`);
+const timeMilliSecs= myTime.getTime()
+// const month= (myTime.getUTCMonth()+1).toString().padStart(2, '0')
+// const day = myTime.getUTCDate().toString().padStart(2,'0')
+// const hour =( myTime.getUTCHours()+1).toString().padStart(2,'0')
+// const minutes = myTime.getUTCMinutes().toString().padStart(2,'0')
+// const seconds = myTime.getUTCSeconds().toString().padStart(2,'0')
+// console.log(`The time is ${hour}:${minutes}:${seconds}Z`);
 
 const dateFunc=()=>{
     switch(dayOfWeekNow){
@@ -52,7 +53,7 @@ const handleshow=()=>{
         moreInfoButton.textContent='click here to see less info'
         showMoreInfo.style.display="flex"
         dateFunc()
-        time.textContent= `The time is ${hour}:${minutes}:${seconds}Z`
+        time.textContent= `The time is ${timeMilliSecs}`
     }else{
         moreInfoButton.textContent='click here to see more info'
         showMoreInfo.style.display='none'
