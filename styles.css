@@ -1,0 +1,61 @@
+body{
+    overflow: hidden;
+}
+.main-container{
+ display: flex;
+ padding: 5px;
+ height: 100vh;
+ 
+}
+/* body{
+    background-color: black;
+} */
+.left-side{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(192, 192, 102);
+    color: white;
+    padding-left: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+}
+
+.show-info{
+    display: none;
+}
+.github-button{
+    width: 5rem;
+    
+}
+.github-image{
+    width: 5rem;
+    object-fit: fill;
+}
+.info-button{
+    background-color: gray;
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+.right-side{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding-right: 5px;
+}
+.my-image{
+    width: 100%;
+    object-fit: contain;
+}
+.button-hamburger{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-size: larger;
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+}
