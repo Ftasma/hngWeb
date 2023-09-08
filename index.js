@@ -11,12 +11,13 @@ const offsetHours= 1;
 myTime.setHours(myTime.getHours()-offsetHours)
 const year = myTime.getUTCFullYear()
 const timeMilliSecs= myTime.getTime()
-// const month= (myTime.getUTCMonth()+1).toString().padStart(2, '0')
-// const day = myTime.getUTCDate().toString().padStart(2,'0')
-// const hour =( myTime.getUTCHours()+1).toString().padStart(2,'0')
-// const minutes = myTime.getUTCMinutes().toString().padStart(2,'0')
-// const seconds = myTime.getUTCSeconds().toString().padStart(2,'0')
-// console.log(`The time is ${hour}:${minutes}:${seconds}Z`);
+
+const month= (myTime.getUTCMonth()+1).toString().padStart(2, '0')
+const day = myTime.getUTCDate().toString().padStart(2,'0')
+const hour =( myTime.getUTCHours()+1).toString().padStart(2,'0')
+const minutes = myTime.getUTCMinutes().toString().padStart(2,'0')
+const seconds = myTime.getUTCSeconds().toString().padStart(2,'0')
+console.log(`The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`);
 
 const dateFunc=()=>{
     switch(dayOfWeekNow){
@@ -53,7 +54,7 @@ const handleshow=()=>{
         moreInfoButton.textContent='click here to see less info'
         showMoreInfo.style.display="flex"
         dateFunc()
-        time.textContent= `The time is ${timeMilliSecs}`
+        time.textContent= `The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`
     }else{
         moreInfoButton.textContent='click here to see more info'
         showMoreInfo.style.display='none'
