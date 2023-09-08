@@ -23,7 +23,7 @@ body{
 }
 
 .show-info{
-    display: none;
+    display: flex;
 }
 .github-button{
     width: 5rem;

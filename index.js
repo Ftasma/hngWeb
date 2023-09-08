@@ -18,7 +18,8 @@ const hour =( myTime.getUTCHours()+1).toString().padStart(2,'0')
 const minutes = myTime.getUTCMinutes().toString().padStart(2,'0')
 const seconds = myTime.getUTCSeconds().toString().padStart(2,'0')
 console.log(`The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`);
-
+const currentTimeMilli= new Date().getTime()
+console.log(currentTimeMilli);
 const dateFunc=()=>{
     switch(dayOfWeekNow){
         case 0:
@@ -49,15 +50,14 @@ const dateFunc=()=>{
 }
 
 
-const handleshow=()=>{
-    if(moreInfoButton.textContent==='click here to see more info'){
-        moreInfoButton.textContent='click here to see less info'
+
+   
         showMoreInfo.style.display="flex"
         dateFunc()
         time.textContent= `The time is ${timeMilliSecs}`
-    }else{
+
         moreInfoButton.textContent='click here to see more info'
         showMoreInfo.style.display='none'
-    }
-}
+    
+
 moreInfoButton.addEventListener('click', handleshow)
