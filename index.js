@@ -22,25 +22,25 @@ console.log(`The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`
 const dateFunc=()=>{
     switch(dayOfWeekNow){
         case 0:
-            date.textContent='Today is Sunday';
+            date.textContent='Sunday';
             break;
             case 1:
-                date.textContent='Today is Monday';
-                break;
+                date.textContent='Monday';
+    
                 case 2:
-                    date.textContent='Today is Tuesday';
+                    date.textContent='Tuesday';
                     break;
                     case 3:
-                        date.textContent='Today is Wednesday';
+                        date.textContent='Wednesday';
                         break;
                         case 4:
-                            date.textContent='Today is Thursday';
+                            date.textContent='Thursday';
                             break;
                             case 5:
-                                date.textContent='Today is Friday';
+                                date.textContent='Friday';
                                 break;
                                 case 6:
-                                    date.textContent='Today is Saturday';
+                                    date.textContent='Saturday';
                                     break;
                                     default :
                                         date.textContent='Today is ';
@@ -54,7 +54,7 @@ const handleshow=()=>{
         moreInfoButton.textContent='click here to see less info'
         showMoreInfo.style.display="flex"
         dateFunc()
-        time.textContent= `The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`
+        time.textContent= `${timeMilliSecs}`
     }else{
         moreInfoButton.textContent='click here to see more info'
         showMoreInfo.style.display='none'
