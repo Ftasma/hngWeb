@@ -54,10 +54,10 @@ const dateFunc=()=>{
    
         showMoreInfo.style.display="flex"
         dateFunc()
-        time.textContent= `The time is ${timeMilliSecs}`
+        time.textContent= `The time is ${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z`
 
-        moreInfoButton.textContent='click here to see more info'
-        showMoreInfo.style.display='none'
+        
+        
     
 
 moreInfoButton.addEventListener('click', handleshow)
