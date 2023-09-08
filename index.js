@@ -54,7 +54,7 @@ const handleshow=()=>{
         moreInfoButton.textContent='click here to see less info'
         showMoreInfo.style.display="flex"
         dateFunc()
-        time.textContent= `${timeMilliSecs}`
+        time.textContent= `The time is ${timeMilliSecs}`
     }else{
         moreInfoButton.textContent='click here to see more info'
         showMoreInfo.style.display='none'
