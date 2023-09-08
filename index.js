@@ -25,22 +25,22 @@ const dateFunc=()=>{
             date.textContent='Sunday';
             break;
             case 1:
-                date.textContent='Monday';
+                date.textContent= 'Current day of the week is Monday';
     
                 case 2:
-                    date.textContent='Tuesday';
+                    date.textContent='Current day of the week is Tuesday';
                     break;
                     case 3:
-                        date.textContent='Wednesday';
+                        date.textContent='Current day of the week is Wednesday';
                         break;
                         case 4:
-                            date.textContent='Thursday';
+                            date.textContent='Current day of the week is Thursday';
                             break;
                             case 5:
-                                date.textContent='Friday';
+                                date.textContent='Current day of the week is Friday';
                                 break;
                                 case 6:
-                                    date.textContent='Saturday';
+                                    date.textContent='Current day of the week is Saturday';
                                     break;
                                     default :
                                         date.textContent='Today is ';
